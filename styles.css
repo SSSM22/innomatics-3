@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('img5.jfif'); /* Add the background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: "Cursive";
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.feature {
+    background-color: lightcoral;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sign-up {
+
+    padding: 2em;
+    text-align: center;
+}
+
+.sign-up form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .feature {
+        width: 100%;
+    }
+}
+
+/* Tablet Layout */
+@media (min-width: 601px) and (max-width: 900px) {
+    .features {
+        flex-direction: row;
+    }
+    .feature {
+        width: calc(50% - 1em);
+    }
+
+    .sign-up {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 901px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "feature feature"
+            "sign-up content";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .features {
+        grid-area: feature;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .feature {
+        width: 30%;
+    }
+
+    .sign-up {
+        grid-area: sign-up;
+    }
+
+    .content {
+        grid-area: content;
+    }
+}
