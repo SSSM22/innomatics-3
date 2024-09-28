@@ -10,15 +10,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('img5.jfif'); /* Add the background image */
+    background-image: url('bg.png'); /* Add the background image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color:lightsalmon;
+    color: black;
     text-align: center;
     padding: 1em;
     font-family: "Cursive";
@@ -44,7 +44,7 @@ main {
 }
 
 .feature {
-    background-color: lightcoral;
+    background-color: lightslategray;
     padding: 1em;
     width: 100%;
     text-align: center;
@@ -71,7 +71,7 @@ main {
 
 footer {
     background-color: #333;
-    color: white;
+    color:black;
     text-align: center;
     padding: 1em;
 }
@@ -126,6 +126,12 @@ footer {
 
     .sign-up {
         grid-area: sign-up;
+    }
+    .sign-up h2 {
+        background-color: lightslategray;
+    }
+    .sign-up button{
+        background-color: lightslategray;
     }
 
     .content {
